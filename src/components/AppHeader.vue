@@ -1,6 +1,62 @@
 <script>
 export default {
   name: "AppHeader",
+  data() {
+    return {
+      menu: [
+        {
+          text: "Characters",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Comics",
+          href: "#",
+          current: true,
+        },
+        {
+          text: "Movies",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Tv",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Games",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Collectibles",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Videos",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Fans",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "News",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Show",
+          href: "#",
+          current: false,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -13,16 +69,11 @@ export default {
       </div>
       <nav>
         <ul>
-          <li><a href="#">Characters</a></li>
-          <li><a href="#">Comics</a></li>
-          <li><a href="#">Movies</a></li>
-          <li><a href="#">Tv</a></li>
-          <li><a href="#">Games</a></li>
-          <li><a href="#">Collectibles</a></li>
-          <li><a href="#">Videos</a></li>
-          <li><a href="#">Fans</a></li>
-          <li><a href="#">News</a></li>
-          <li><a href="#">Show</a></li>
+          <li v-for="(link, index) in menu" :key="index">
+            <a :class="{ active: link.current }" :href="link.href">{{
+              link.text
+            }}</a>
+          </li>
         </ul>
       </nav>
     </header>
@@ -34,7 +85,7 @@ export default {
 @use "../style/partials/variables" as *;
 .up {
   height: 30px;
-  background-color: $secondary-color;
+  background-color: #212121;
 }
 header {
   @include betweenFlex;
@@ -56,6 +107,9 @@ header {
   a {
     text-decoration: none;
     $secondary-color: #303030;
+  }
+  .active {
+    color: $tertiary-color;
   }
 }
 </style>
