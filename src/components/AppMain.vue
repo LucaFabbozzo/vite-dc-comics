@@ -1,6 +1,42 @@
 <script>
 export default {
   name: "AppMain",
+  data() {
+    return {
+      menu: [
+        {
+          text: "Digital comics",
+          img: "../assets/img/buy-comics-digital-comics.png",
+          href: "#",
+          current: true,
+        },
+        {
+          text: "Dc merchandise",
+          img: "../assets/img/buy-comics-merchandise.png",
+          href: "#",
+          current: true,
+        },
+        {
+          text: "Subscription",
+          img: "../assets/img/buy-comics-shop-locator.png",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Comic shop locator",
+          img: "../assets/img/buy-comics-subscription.png",
+          href: "#",
+          current: false,
+        },
+        {
+          text: "Dc power visa",
+          img: "../assets/img/buy-dc-power-visa.svg",
+          href: "#",
+          current: false,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -12,7 +48,13 @@ export default {
       </div>
     </div>
     <div class="bottom">
-      <div class="container"></div>
+      <div class="container menu">
+        <ul>
+          <li v-for="(link, index) in menu" :key="index">
+            <a :href="link.href">{{ link.text }}</a>
+          </li>
+        </ul>
+      </div>
     </div>
   </main>
 </template>
@@ -29,5 +71,18 @@ export default {
 .bottom {
   height: 115px;
   background-color: $tertiary-color;
+  @include centerFlex;
+  ul {
+    @include betweenFlex;
+    li {
+      list-style: none;
+      a {
+        text-decoration: none;
+        color: $primary-color;
+        font-size: 0.7rem;
+        text-transform: uppercase;
+      }
+    }
+  }
 }
 </style>
