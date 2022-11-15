@@ -132,9 +132,15 @@ footer {
   .bottom {
     height: 80px;
     background-color: $secondary-color;
+    .left {
+      img {
+        cursor: pointer;
+      }
+    }
     .icons {
       height: 100%;
       @include betweenFlex;
+
       .right {
         button {
           width: 125px;

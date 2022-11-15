@@ -50,7 +50,7 @@ export default {
           current: false,
         },
         {
-          text: "Show",
+          text: "Shop",
           href: "#",
           current: false,
         },
@@ -107,9 +107,12 @@ header {
   a {
     text-decoration: none;
     $secondary-color: #303030;
+    padding-bottom: 34px;
   }
+
   .active {
     color: $tertiary-color;
+    border-bottom: 3px solid $tertiary-color;
   }
 }
 </style>
