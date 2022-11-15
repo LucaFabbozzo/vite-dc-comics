@@ -12,6 +12,12 @@ body {
     sans-serif;
 }
 
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
 h1,
 h2,
 h3 {
@@ -26,8 +32,3 @@ img {
   max-width: 100;
 }
 
-.container {
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
-}

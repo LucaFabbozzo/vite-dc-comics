@@ -10,9 +10,11 @@ export default {
 </script>
 
 <template>
-  <App-header />
-  <App-main />
-  <App-footer />
+  <div class="container">
+    <App-header />
+    <App-main />
+    <App-footer />
+  </div>
 </template>
 
 
