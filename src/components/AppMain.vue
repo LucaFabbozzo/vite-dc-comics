@@ -11,7 +11,7 @@ export default {
         <h1>Content goes here</h1>
       </div>
     </div>
-    <div class="button"></div>
+    <div class="bottom"></div>
   </div>
 </template>
 
@@ -23,5 +23,9 @@ export default {
   background-color: #1c1c1c;
   height: 100px;
   font-size: 0.6rem;
+}
+.bottom {
+  height: 115px;
+  background-color: $tertiary-color;
 }
 </style>
