@@ -5,14 +5,16 @@ export default {
 </script>
 
 <template>
-  <div class="main">
+  <main>
     <div class="top">
       <div class="container">
         <h1>Content goes here</h1>
       </div>
     </div>
-    <div class="bottom"></div>
-  </div>
+    <div class="bottom">
+      <div class="container"></div>
+    </div>
+  </main>
 </template>
 
 <style lang="scss" scoped>
