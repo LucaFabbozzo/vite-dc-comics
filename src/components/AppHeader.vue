@@ -5,7 +5,11 @@ export default {
 </script>
 
 <template>
-  <p>H</p>
+  <header>
+    <div class="logo">
+      <img src="/dc-logo.png" alt="Logo">
+    </div>
+  </header>
 </template>
 
 

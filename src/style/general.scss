@@ -9,5 +9,25 @@
 
 body {
   font-family: 'Lato',
-    sans-serif;;
+    sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  color: $primary-color;
+}
+
+li {
+  color: $secondary-color;
+}
+
+img {
+  max-width: 100;
+}
+
+.container {
+  width: 90%;
+  max-width: 1170px;
+  margin: 0 auto;
 }
