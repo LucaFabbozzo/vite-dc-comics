@@ -12,8 +12,8 @@ body {
 }
 
 .container {
-  width: 90%;
-  max-width: 1170px;
+  width: 80%;
+  max-width: 1020px;
   margin: 0 auto;
 }
 
@@ -24,10 +24,10 @@ h3 {
 }
 
 a {
-  color: $secondary-color;
+  color: $quaternary-color;
 }
 
 img {
-  max-width: 100;
+  max-width: 100%;
 }
 
