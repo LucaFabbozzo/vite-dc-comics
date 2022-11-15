@@ -6,36 +6,41 @@ export default {
       menu: [
         {
           text: "Digital comics",
-          img: "../assets/img/buy-comics-digital-comics.png",
+          img: "buy-comics-digital-comics.png",
           href: "#",
-          current: true,
+          current: false,
         },
         {
           text: "Dc merchandise",
-          img: "../assets/img/buy-comics-merchandise.png",
+          img: "buy-comics-merchandise.png",
           href: "#",
-          current: true,
+          current: false,
         },
         {
           text: "Subscription",
-          img: "../assets/img/buy-comics-shop-locator.png",
+          img: "buy-comics-subscriptions.png",
           href: "#",
           current: false,
         },
         {
           text: "Comic shop locator",
-          img: "../assets/img/buy-comics-subscription.png",
+          img: "buy-comics-shop-locator.png",
           href: "#",
           current: false,
         },
         {
           text: "Dc power visa",
-          img: "../assets/img/buy-dc-power-visa.svg",
+          img: "buy-dc-power-visa.svg",
           href: "#",
-          current: false,
+          current: true,
         },
       ],
     };
+  },
+  methods: {
+    getPathImage(img) {
+      return new URL(`../assets/img/${img}`, import.meta.url).href;
+    },
   },
 };
 </script>
@@ -51,6 +56,7 @@ export default {
       <div class="container menu">
         <ul>
           <li v-for="(link, index) in menu" :key="index">
+            <img :src="getPathImage(link.img)" alt="" />
             <a :href="link.href">{{ link.text }}</a>
           </li>
         </ul>
@@ -75,7 +81,15 @@ export default {
   ul {
     @include betweenFlex;
     li {
+      @include betweenFlex;
       list-style: none;
+      img {
+        width: 30px;
+        margin-right: 10px;
+      }
+      .active {
+        filter: invert(100%);
+      }
       a {
         text-decoration: none;
         color: $primary-color;
