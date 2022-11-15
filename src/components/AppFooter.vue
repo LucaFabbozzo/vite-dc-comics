@@ -116,12 +116,15 @@ footer {
             text-decoration: none;
             font-size: 0.6rem;
           }
+          a:hover {
+            color: $primary-color;
+          }
         }
       }
       .right {
         img {
-          transform: translateY(-1%);
-          width: 95%;
+          transform: translateX(25%);
+          width: 80%;
         }
       }
     }
@@ -134,12 +137,13 @@ footer {
       @include betweenFlex;
       .right {
         button {
-          width: 120px;
+          width: 125px;
           background-color: $secondary-color;
           text-transform: uppercase;
           color: $primary-color;
-          border: 1px solid $tertiary-color;
-          padding: 8px 10px;
+          border: 2px solid $tertiary-color;
+          padding: 10px;
+          cursor: pointer;
         }
       }
       .left {

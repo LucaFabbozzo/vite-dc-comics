@@ -73,6 +73,12 @@ export default {
   background-color: #1c1c1c;
   height: 100px;
   font-size: 0.6rem;
+  h1:after {
+    content: "<--";
+  }
+  h1:before {
+    content: "-->";
+  }
 }
 .bottom {
   height: 115px;
