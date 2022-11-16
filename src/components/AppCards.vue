@@ -19,8 +19,17 @@
 <style lang="scss" scoped>
 @use '../style/partials/variables' as *;
   .card {
-    flex-basis: 25%;
-    min-height: 200px;
+    padding: 10px;
+    width: 150px;
+    height: 150px;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover scale-down;
+    }
+    h4 {
+      color: $primary-color;
+    }
   }
 
 

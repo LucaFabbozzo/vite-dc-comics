@@ -78,17 +78,20 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 .top {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #1c1c1c;
   height: 50%;
   font-size: 0.6rem;
   .cards {
     display: flex;
-    justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
   }
 }
 .bottom {
-  height: 50%;
+  height: 100px;
   background-color: $tertiary-color;
   @include centerFlex;
   ul {
