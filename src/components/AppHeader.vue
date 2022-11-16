@@ -111,7 +111,12 @@ header {
     padding-bottom: 34px;
   }
 
-  .active {
+  // .active {
+  //   color: $tertiary-color;
+  //   border-bottom: 3px solid $tertiary-color;
+  // }
+
+  a:hover {
     color: $tertiary-color;
     border-bottom: 3px solid $tertiary-color;
   }
