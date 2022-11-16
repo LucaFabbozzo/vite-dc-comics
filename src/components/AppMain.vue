@@ -1,6 +1,8 @@
 <script>
+import AppCards from './AppCards.vue';
 export default {
   name: "AppMain",
+  components: { AppCards },
   data() {
     return {
       menu: [
@@ -49,7 +51,7 @@ export default {
   <main>
     <div class="top">
       <div class="container">
-        <h1>Content goes here</h1>
+        <AppCards />
       </div>
     </div>
     <div class="bottom">
