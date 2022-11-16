@@ -22,10 +22,12 @@
     padding: 10px;
     width: 150px;
     height: 150px;
+    cursor: pointer;
     img {
       width: 100%;
       height: 100%;
-      object-fit: cover scale-down;
+      object-fit: cover;
+      object-position: top;
     }
     h4 {
       color: $primary-color;

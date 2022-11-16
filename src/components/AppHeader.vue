@@ -93,6 +93,7 @@ header {
   background-color: $primary-color;
   img {
     width: 50px;
+    cursor: pointer;
   }
   ul {
     list-style: none;
