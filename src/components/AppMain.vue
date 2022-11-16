@@ -83,13 +83,14 @@ export default {
   background-color: $tertiary-color;
   @include centerFlex;
   ul {
-    @include betweenFlex;
+    @include evenlyFlex;
     li {
-      @include betweenFlex;
+      @include evenlyFlex;
       list-style: none;
       img {
+        object-fit: cover;
         width: 30px;
-        margin-right: 10px;
+        margin-right: 10px
       }
       .active {
         filter: invert(100%);
@@ -97,7 +98,7 @@ export default {
       a {
         text-decoration: none;
         color: $primary-color;
-        font-size: 0.7rem;
+        font-size: 0.6rem;
         text-transform: uppercase;
       }
     }

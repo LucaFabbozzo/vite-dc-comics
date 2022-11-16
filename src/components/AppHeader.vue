@@ -1,60 +1,10 @@
 <script>
+import nav from '../data/nav';
 export default {
   name: "AppHeader",
   data() {
     return {
-      menu: [
-        {
-          text: "Characters",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Comics",
-          href: "#",
-          current: true,
-        },
-        {
-          text: "Movies",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Tv",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Games",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Collectibles",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Videos",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Fans",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "News",
-          href: "#",
-          current: false,
-        },
-        {
-          text: "Shop",
-          href: "#",
-          current: false,
-        },
-      ],
+      nav
     };
   },
 };
@@ -69,7 +19,7 @@ export default {
       </div>
       <nav>
         <ul>
-          <li v-for="(link, index) in menu" :key="index">
+          <li v-for="(link, index) in nav" :key="index">
             <a :class="{ active: link.current }" :href="link.href">{{
               link.text
             }}</a>
@@ -88,7 +38,7 @@ export default {
   background-color: #212121;
 }
 header {
-  @include betweenFlex;
+  @include aroundFlex;
   height: 85px;
   background-color: $primary-color;
   img {
@@ -97,7 +47,8 @@ header {
   }
   ul {
     list-style: none;
-    @include centerFlex;
+    @include aroundFlex;
+    width: 600px;
   }
   li {
     margin-left: 20px;
