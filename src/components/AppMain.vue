@@ -29,6 +29,10 @@ export default {
           :cardThumb="card.thumb"
           :cardSeries="card.series"
           />
+         
+      </div> 
+      <div class="btn">
+        <a href="#">Load More</a>
       </div>
     </div>
     <div class="bottom">
@@ -49,7 +53,7 @@ export default {
 @use "../style/partials/variables" as *;
 .top {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 10px;
   background-color: #1c1c1c;
   height: 50%;
   font-size: 0.6rem;
@@ -59,9 +63,23 @@ export default {
     align-items: center;
     justify-content: space-between;
   }
+  .btn {
+    margin: 50px auto;
+    width: 150px;
+    text-align: center;
+    background-color: $tertiary-color;
+    padding: 10px 15px;
+    cursor: pointer;
+    a {
+      color: $primary-color;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+  
 }
 .bottom {
-  height: 100px;
+  height: 120px;
   background-color: $tertiary-color;
   @include centerFlex;
   ul {
