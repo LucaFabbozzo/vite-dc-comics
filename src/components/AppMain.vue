@@ -53,7 +53,12 @@ export default {
   <main>
     <div class="top">
       <div class="container cards">
-        <AppCards v-for="(card, index) in books" :key="index"/>
+        <AppCards
+          v-for="(card, index) in books" 
+          :key="index"
+          :cardThumb="card.thumb"
+          :cardSeries="card.series"
+          />
       </div>
     </div>
     <div class="bottom">
@@ -79,6 +84,7 @@ export default {
   .cards {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 .bottom {
