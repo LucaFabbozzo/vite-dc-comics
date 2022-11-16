@@ -1,10 +1,12 @@
 <script>
 import AppCards from './AppCards.vue';
+import books from '../data/books';
 export default {
   name: "AppMain",
   components: { AppCards },
   data() {
     return {
+      books,
       menu: [
         {
           text: "Digital comics",
@@ -50,8 +52,8 @@ export default {
 <template>
   <main>
     <div class="top">
-      <div class="container">
-        <AppCards />
+      <div class="container cards">
+        <AppCards v-for="(card, index) in books" :key="index"/>
       </div>
     </div>
     <div class="bottom">
@@ -71,19 +73,16 @@ export default {
 @use "../style/partials/mixin" as *;
 @use "../style/partials/variables" as *;
 .top {
-  @include centerFlex;
   background-color: #1c1c1c;
-  height: 100px;
+  height: 50%;
   font-size: 0.6rem;
-  h1:after {
-    content: "<--";
-  }
-  h1:before {
-    content: "-->";
+  .cards {
+    display: flex;
+    justify-content: space-between;
   }
 }
 .bottom {
-  height: 115px;
+  height: 50%;
   background-color: $tertiary-color;
   @include centerFlex;
   ul {
