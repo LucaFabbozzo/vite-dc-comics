@@ -31,6 +31,9 @@
     }
     h4 {
       color: $primary-color;
+      text-transform: uppercase;
+      font-size: 0.5rem;
+      padding-top: 5px;
     }
   }
 
