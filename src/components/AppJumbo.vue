@@ -26,7 +26,7 @@
     text-align: center;
     text-transform: uppercase;
     padding: 10px 20px;
-    transform: translateY(770%);
+    transform: translateY(330px);
   }
  }
 </style>

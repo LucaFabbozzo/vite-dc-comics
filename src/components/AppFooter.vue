@@ -123,8 +123,8 @@ footer {
       }
       .right {
         img {
-          transform: translateX(25%);
-          width: 80%;
+          transform: translateX(5%);
+          width: 400px;
         }
       }
     }
