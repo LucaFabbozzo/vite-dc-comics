@@ -1,14 +1,13 @@
 <script>
 import AppCards from './AppCards.vue';
 import books from '../data/books';
-import menu from '../data/menu';
+import Items from '../components/Items.vue'
 export default {
   name: "AppMain",
-  components: { AppCards },
+  components: { AppCards, Items },
   data() {
     return {
       books,
-      menu
     };
   },
   methods: {
@@ -35,16 +34,7 @@ export default {
         <a href="#">Load More</a>
       </div>
     </div>
-    <div class="bottom">
-      <div class="container menu">
-        <ul>
-          <li v-for="(link, index) in menu" :key="index">
-            <img :src="getPathImage(link.img)" alt="" />
-            <a :href="link.href">{{ link.text }}</a>
-          </li>
-        </ul>
-      </div>
-    </div>
+    <Items />
   </main>
 </template>
 
@@ -74,33 +64,6 @@ export default {
       color: $primary-color;
       text-decoration: none;
       text-transform: uppercase;
-    }
-  }
-  
-}
-.bottom {
-  height: 120px;
-  background-color: $tertiary-color;
-  @include centerFlex;
-  ul {
-    @include evenlyFlex;
-    li {
-      @include evenlyFlex;
-      list-style: none;
-      img {
-        object-fit: cover;
-        width: 30px;
-        margin-right: 10px
-      }
-      .active {
-        filter: invert(100%);
-      }
-      a {
-        text-decoration: none;
-        color: $primary-color;
-        font-size: 0.6rem;
-        text-transform: uppercase;
-      }
     }
   }
 }
